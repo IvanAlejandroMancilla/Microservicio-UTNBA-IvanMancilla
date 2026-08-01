@@ -29,7 +29,7 @@ public class ProductoService {
     }
 
     public List<Producto> getProductosActivos() {
-        return productoRepository.findByActivoProducto(true);
+        return productoRepository.findByActivo(true);
     }
 
     public Producto addProducto(Producto producto) {
@@ -39,12 +39,12 @@ public class ProductoService {
     public Producto updateProducto(Long id, Producto datosActualizados) {
         Producto producto = productoRepository.findById(id)
                 .orElseThrow(() -> new ProductoNotFoundException("Producto no encontrado con id: " + id));
-        producto.setNombreProducto(datosActualizados.getNombreProducto());
-        producto.setDetalleProducto(datosActualizados.getDetalleProducto());
-        producto.setMontoAsociadoProducto(datosActualizados.getMontoAsociadoProducto());
-        producto.setTasaInteresProducto(datosActualizados.getTasaInteresProducto());
-        producto.setActivoProducto(datosActualizados.isActivoProducto());
-        producto.setFechaVencimientoProducto(datosActualizados.getFechaVencimientoProducto());
+        producto.setNombre(datosActualizados.getNombre());
+        producto.setDescripcion(datosActualizados.getDescripcion());
+        producto.setMontoAsociado(datosActualizados.getMontoAsociado());
+        producto.setTasaInteres(datosActualizados.getTasaInteres());
+        producto.setActivo(datosActualizados.isActivo());
+        producto.setFechaVencimiento(datosActualizados.getFechaVencimiento());
         return productoRepository.save(producto);
     }
 

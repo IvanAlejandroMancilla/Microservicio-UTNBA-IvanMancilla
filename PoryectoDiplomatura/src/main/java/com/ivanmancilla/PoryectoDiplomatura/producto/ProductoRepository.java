@@ -12,5 +12,5 @@ public interface ProductoRepository extends JpaRepository<Producto, Long> {
 
     List<Producto> findByTipo(TipoProducto tipo);
 
-    List<Producto> findByActivoProducto(boolean activoProducto);
+    List<Producto> findByActivo(boolean activo);
 }
