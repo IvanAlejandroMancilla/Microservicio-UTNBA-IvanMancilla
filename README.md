@@ -3,7 +3,6 @@
 > **Diplomatura en Desarrollo de Software FinTech: IA y Microservicios**  
 > **Alumno**: Ivan Alejandro Mancilla  
 > **Repositorio Principal del Ecosistema**: [Microservicio-UTNBA-IvanMancilla](https://github.com/IvanAlejandroMancilla/Microservicio-UTNBA-IvanMancilla)
-> Use la misma estrutura que en .net para los microservicios
 ---
 
 ## 📌 1. Visión General y Arquitectura

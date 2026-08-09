@@ -3,7 +3,6 @@ package com.ivanmancilla.customerservice.controller;
 import com.ivanmancilla.customerservice.dto.CustomerRequestDTO;
 import com.ivanmancilla.customerservice.dto.CustomerResponseDTO;
 import com.ivanmancilla.customerservice.service.CustomerService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -21,8 +20,11 @@ import java.util.List;
 @RequestMapping("/clientes")
 public class CustomerController {
 
-    @Autowired
-    private CustomerService customerService;
+    private final CustomerService customerService;
+
+    public CustomerController(CustomerService customerService) {
+        this.customerService = customerService;
+    }
 
     @PostMapping
     public ResponseEntity<CustomerResponseDTO> createCustomer(@RequestBody CustomerRequestDTO requestDTO) {

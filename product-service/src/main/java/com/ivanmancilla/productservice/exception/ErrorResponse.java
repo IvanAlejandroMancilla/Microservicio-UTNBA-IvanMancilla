@@ -1,4 +1,4 @@
-package com.ivanmancilla.customerservice.exception;
+package com.ivanmancilla.productservice.exception;
 
 import java.time.LocalDateTime;
 
