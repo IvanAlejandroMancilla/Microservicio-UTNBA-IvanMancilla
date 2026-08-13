@@ -61,7 +61,7 @@ Debe levantarse **después** del `config-server` y **antes** de `customer-servic
 
 ```bash
 cd eureka-server
-./mvnw spring-boot:run
+mvn spring-boot:run
 ```
 
 ## 🔍 Cómo probarlo
@@ -77,4 +77,3 @@ Ahí se ve la lista de instancias registradas (`UP`) en tiempo real. Una vez que
 ## 🔗 Relación con el resto del ecosistema
 
 Ver el diagrama y la guía de arranque completa en el [README principal](../README.md) del repositorio.
-# eureka-server-IvanMancilla
